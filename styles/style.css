@@ -20,7 +20,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-inline: 500px;
-    background-color: #2d3133;
+    background-color: light-dark(#e0e0e0 ,#2d3133);
+    color: light-dark(#2d3133, #c2c2c2);
+    
+
+    
     padding: 10px;
     border-radius: 13px;
 }
