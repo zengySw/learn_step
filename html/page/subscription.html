@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        color-scheme: light dark;
+    }
+
+    body {
+        color: light-dark(#1e2122, #efefec);
+        background-color: light-dark(#efedea, #0e1210);
+    }
+
+    .container {
+        position: relative;
+        top: 75px;
+        left: 17%;
+        scale: 200%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-inline: 500px;
+        background-color: #2d3133;
+        padding: 10px;
+        border-radius: 13px;
+        width: 165px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    a {
+        position: relative;
+        /* Allows positioning of the pseudo-element */
+        margin: 2px;
+        border: whitesmoke solid 1px;
+        /* White border */
+        text-decoration: none;
+        /* Removes underline from the link */
+        color: whitesmoke;
+        /* Sets link color to whitesmoke */
+        padding: 2px;
+        font-size: 30px;
+        /* Sets the font size */
+        z-index: 1;
+        /* Ensures the link stays above the pseudo-element */
+    }
+
+    a::before {
+        content: '';
+        position: absolute;
+        /* Position it within the link */
+        bottom: 0;
+        /* Position it at the bottom of the link */
+        left: 0;
+        /* Align to the left */
+        width: 0;
+        /* Start with no width */
+        height: 100%;
+        /* Height of the pseudo-element */
+        background: rgba(255, 255, 255, 0.3);
+        /* Light semi-transparent white background */
+        transition: all 200ms ease;
+        /* Smooth transition for width change */
+        z-index: 0;
+        /* Keeps the pseudo-element behind the link */
+    }
+
+    a:hover::before {
+        width: 100%;
+        /* Expand the width on hover */
+    }
+</style>
+
+<body>
+    <h1>ВНИМАНИЕ!</h1>
+    <p>не писать настоящую информацию, ни при каких обстоятельствах</p>
+    <header>
+        <nav>
+            <a href="../index.html">головна</a>
+            <a href="">рандомний фільм</a>
+            <a href="../page/subscription.html">підписка</a>
+            <a href="">відгуки</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form method="post" action="https://formtester.goodbytes.be/post.php">
+
+            <input type="number" required placeholder="enter card" name="card" id="card">
+            <input type="password" name="cvv" id="cvv" required placeholder="cvv">
+            <input type="email" name="email" id="email" required placeholder="email@example.com">
+            term of service
+            <input type="checkbox" name="termCheck" id="termCheck">
+
+            <input type="submit" value="subscribe">
+
+        </form>
+    </div>
+</body>
+
+</html>
