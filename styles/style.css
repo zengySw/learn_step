@@ -1,115 +1,140 @@
-:root {
-    color-scheme: light dark;
+@font-face {
+    font-family: dotmatrix;
+    src: url(../assets/font/DOTMATRI.TTF);
+}
+
+@font-face {
+    font-family: manrope;
+    src: url(../assets/font/Manrope-VariableFont_wght.ttf);
+}
+
+.main {
+    align-self: center;
+    width: 48px;
+    height: 48px;
+}
+
+.headertext {
+    font-family: dotmatrix, serif;
+    color: white !important;
+    align-self: center;
+}
+
+
+.burger {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px grey;
 }
 
 body {
-    color: light-dark(#1e2122, #efefec);
-    background-color: light-dark(#efedea, #0e1210);
+    background-color: black;
+    width: 1440px;
+    height: 1024px;
+    margin: 0 auto;
 }
 
-.card {
-    font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 12px;
-    margin: 4px;
-}
+.maintext1 {
+    margin-top: 350px;
+    width: 397px;
+    font-family: manrope, serif;
 
-.container {
-    min-width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-inline: 500px;
-    background-color: light-dark(#e0e0e0 ,#2d3133);
-    color: light-dark(#2d3133, #c2c2c2);
-    
-
-    
-    padding: 10px;
-    border-radius: 13px;
-}
-
-img {
-    width: 300px;
-    height: 400px;
-    border-radius: 13px;
-}
-
-.card:hover {
-    cursor: pointer;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-}
-
-a {
-    position: relative; /* Allows positioning of the pseudo-element */
-    margin: 2px;
-    border: whitesmoke solid 1px; /* White border */
-    text-decoration: none; /* Removes underline from the link */
-    color: whitesmoke; /* Sets link color to whitesmoke */
-    padding: 2px;
-    font-size: 30px; /* Sets the font size */
-    z-index: 1; /* Ensures the link stays above the pseudo-element */
-}
-
-.movie-button {
-    position: absolute;
-    left: 20%;
-    top: 50%;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #ff5722;
     color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 48px;
 }
 
-.movie-button:hover {
-    background-color: #e64a19;
+.maintext2 {
+    margin-top: -50px;
+    width: 397px;
+
+    font-family: manrope, serif;
+    color: rgb(165, 165, 165);
+    font-size: 48px;
 }
 
-
-@font-face {
-    font-family: 'glitch';
-    src: url(../assets/font/RubikGlitch-Regular.ttf);
+.frame {
+    position: relative;
+    left: 1051px;
+    top: -500px;
 }
 
-h1 {
-    font-size: 70px;
-    font-family: 'glitch';
-    display: flex;
-    justify-content: center;
+.t1, .t2, .t3 {
+    padding: 3px;
+    border-radius: 30px;
+    display: inline;
+    position: relative;
+    top: -450px;
+    border: solid 1px #9A9898;
+    color: #9A9898 !important;
+    font-family: manrope, serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 600;
 }
 
-
-a::before {
-    content: '';
-    position: absolute; /* Position it within the link */
-    bottom: 0; /* Position it at the bottom of the link */
-    left: 0; /* Align to the left */
-    width: 0; /* Start with no width */
-    height: 100%; /* Height of the pseudo-element */
-    background: rgba(255, 255, 255, 0.3); /* Light semi-transparent white background */
-    transition: all 200ms ease; /* Smooth transition for width change */
-    z-index: 0; /* Keeps the pseudo-element behind the link */
+.t1 {
+    left: -25%;
+    padding-block: 10px;
+    padding-inline: 24px;
 }
 
-
-a:hover::before {
-    width: 100%; /* Expand the width on hover */
+.t2 {
+    left: -52.7%;
+    top: -390px;
+    padding-block: 10px;
+    padding-inline: 24px;
 }
 
-.testCheck:checked
-{
-    filter: blur(5px);
+.t3 {
+    left: -1035px;
+    top: -330px;
+    padding-block: 10px;
+    padding-inline: 24px;
 }
 
-.card:focus {
-    filter: blur(5px);
+.iPhone, .Char {
+    color: white;
+    font-family: manrope, serif;
+}
+
+.iPhone {
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 600;
+}
+
+.Char {
+    margin-top: -25px;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 400;
+}
+
+.textBox3 { 
+    position: relative;
+    left: 1051px;
+    top: -520px;
+    width: 397px;
+    color: #9A9898 !important;
+    font-family: manrope, serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 600;
+    
+}
+
+.Buy {
+    background-color: yellow;
+    border-radius: 30px;
+    padding-block: 10px;
+    padding-inline: 24px;
+    align-self: center;
+    display: inline;
+    color: #000;
 }
